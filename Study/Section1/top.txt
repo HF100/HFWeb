@@ -1,0 +1,13 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
+
+<html>
+	<head>
+		<meta pageEncoding="gb2312">
+		<title>《JSP从入门到实战》网站</title>
+	</head>
+	<body>
+		<p align="center">
+			<b>
+			<font size="5">《JSP网络编程从基础到实践》网站</font>
+			</b>
+		</p>
