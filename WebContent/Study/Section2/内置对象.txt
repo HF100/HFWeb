@@ -1,0 +1,3 @@
+内置对象有： request response session application out config pageContext
+
+
