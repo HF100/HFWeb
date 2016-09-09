@@ -10,8 +10,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>SELECT 操作</title>
-<script>!function(e){var c={nonSecure:"8123",secure:"8124"},t={nonSecure:"http://",secure:"https://"},r={nonSecure:"127.0.0.1",secure:"gapdebug.local.genuitec.com"},n="https:"===window.location.protocol?"secure":"nonSecure";script=e.createElement("script"),script.type="text/javascript",script.async=!0,script.src=t[n]+r[n]+":"+c[n]+"/codelive-assets/bundle.js",e.getElementsByTagName("head")[0].appendChild(script)}(document);</script></head>
-<body data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-40" data-genuitec-path="/HFWeb/WebContent/Study/Section4/SelectSql.jsp">
+<body>
 <!-- JDBC 驱动名及数据库 URL
 数据库的用户名与密码,需要根据自己的设置
 useUnicode=true&characterEncoding=utf-8 防止中文乱码 -->
@@ -23,7 +22,7 @@ useUnicode=true&characterEncoding=utf-8 防止中文乱码 -->
 <sql:query dataSource="${snapshot}" var="result">
 SELECT * from websites;
 </sql:query>
-<h1 data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-40" data-genuitec-path="/HFWeb/WebContent/Study/Section4/SelectSql.jsp">JSP 数据库实例 - 菜鸟教程</h1>
+<h1>JSP 数据库实例 - 菜鸟教程</h1>
 <table border="1" width="100%">
 <tr>
    <th>ID</th>
