@@ -4,7 +4,7 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<body>
+<body data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-24" data-genuitec-path="/HFWeb/WebContent/Study/Section3/DownFileExample2.jsp">
 	<%
 		//得到向客户端输出的输出流
 		OutputStream outStream1 = response.getOutputStream();

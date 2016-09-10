@@ -48,9 +48,9 @@ function on_submit() {
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 	<title>新用户注册</title>
-</head>
-<body>
-	<form method="POST" action="AcceptReg.jsp" name="form1" onsubmit="return on_submit()">
+<script>!function(e){var c={nonSecure:"8123",secure:"8124"},t={nonSecure:"http://",secure:"https://"},r={nonSecure:"127.0.0.1",secure:"gapdebug.local.genuitec.com"},n="https:"===window.location.protocol?"secure":"nonSecure";script=e.createElement("script"),script.type="text/javascript",script.async=!0,script.src=t[n]+r[n]+":"+c[n]+"/codelive-assets/bundle.js",e.getElementsByTagName("head")[0].appendChild(script)}(document);</script></head>
+<body data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-20" data-genuitec-path="/HFWeb/WebContent/Study/Section2/UserReg.jsp">
+	<form method="POST" action="AcceptReg.jsp" name="form1" onsubmit="return on_submit()" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-20" data-genuitec-path="/HFWeb/WebContent/Study/Section2/UserReg.jsp">
 	新用户注册<br>
 	用户名(*):<input type="text" name="username" size="20"><br>
 	密&nbsp;码(*):<input type="password" name="userpassword" size="20"><br>

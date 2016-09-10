@@ -8,8 +8,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>网站计数器</title>
-</head>
-<body>
+<script>!function(e){var c={nonSecure:"8123",secure:"8124"},t={nonSecure:"http://",secure:"https://"},r={nonSecure:"127.0.0.1",secure:"gapdebug.local.genuitec.com"},n="https:"===window.location.protocol?"secure":"nonSecure";script=e.createElement("script"),script.type="text/javascript",script.async=!0,script.src=t[n]+r[n]+":"+c[n]+"/codelive-assets/bundle.js",e.getElementsByTagName("head")[0].appendChild(script)}(document);</script></head>
+<body data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-13" data-genuitec-path="/HFWeb/WebContent/Study/Section2/CounterExample.jsp">
 	<%!
 		//串型化计算函数
 		synchronized void countPeople() {
@@ -31,7 +31,7 @@
 		}
 	Integer yourNumber = (Integer)application.getAttribute("Count");
 	%>
-	<p>
+	<p data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-13" data-genuitec-path="/HFWeb/WebContent/Study/Section2/CounterExample.jsp">
 		欢迎访问本站,你是第<%=yourNumber %>个访问用户
 	</p>
 </body>

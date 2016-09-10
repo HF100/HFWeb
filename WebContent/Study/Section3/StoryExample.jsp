@@ -58,9 +58,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>故事接龙</title>
-</head>
-<body>
-	<div align="center">
+<script>!function(e){var c={nonSecure:"8123",secure:"8124"},t={nonSecure:"http://",secure:"https://"},r={nonSecure:"127.0.0.1",secure:"gapdebug.local.genuitec.com"},n="https:"===window.location.protocol?"secure":"nonSecure";script=e.createElement("script"),script.type="text/javascript",script.async=!0,script.src=t[n]+r[n]+":"+c[n]+"/codelive-assets/bundle.js",e.getElementsByTagName("head")[0].appendChild(script)}(document);</script></head>
+<body data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-31" data-genuitec-path="/HFWeb/WebContent/Study/Section3/StoryExample.jsp">
+	<div align="center" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-31" data-genuitec-path="/HFWeb/WebContent/Study/Section3/StoryExample.jsp">
 		<center>
 			<table border="1">
 				<tr><td colspan="2" align="center">故事接龙游戏</td></tr>

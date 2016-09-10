@@ -21,9 +21,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>列出文件目录</title>
-</head>
-<body>
-	<font size=2>
+<script>!function(e){var c={nonSecure:"8123",secure:"8124"},t={nonSecure:"http://",secure:"https://"},r={nonSecure:"127.0.0.1",secure:"gapdebug.local.genuitec.com"},n="https:"===window.location.protocol?"secure":"nonSecure";script=e.createElement("script"),script.type="text/javascript",script.async=!0,script.src=t[n]+r[n]+":"+c[n]+"/codelive-assets/bundle.js",e.getElementsByTagName("head")[0].appendChild(script)}(document);</script></head>
+<body data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-27" data-genuitec-path="/HFWeb/WebContent/Study/Section3/FileExample1.jsp">
+	<font size=2 data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-27" data-genuitec-path="/HFWeb/WebContent/Study/Section3/FileExample1.jsp">
 		<%
 			File file1 = new File("/Users/KDiOS/Desktop/TESTFile");
 			File file2 = new File("/Users/KDiOS/Desktop/TESTFile/mkfile");
