@@ -21,9 +21,22 @@
 		sqlString = new String("SELECT * FROM websites");
 	} else {
 		//参数查询
-		sqlString = new String("SELECT * FROM websites where name = '" + name.trim() + "'");		
+		/* sqlString = new String("SELECT * FROM websites where name = '" + name.trim() + "'"); */		
 		//模糊查询
-		/* sqlString = new String("SELECT * FROM websites where name like '%" + name.trim() + "%'"); */
+		sqlString = new String("SELECT * FROM websites where name like '%" + name.trim() + "%'");
+		out.print(sqlString);
+	}
+	String url = codeToString(request.getParameter("url"));	
+	if (url == null || url.trim().length() == 0) {
+		//noting to do
+	} else {
+		if (sqlString.indexOf("where") == -1) {
+			//sqlString 语句中没有where 子句
+			sqlString = sqlString +" where url like '%" + url.trim() + "%'";
+		} else {
+			sqlString = sqlString +"and url like '%" + url.trim() + "%'"; 
+		}
+		//模糊查询
 		out.print(sqlString);
 	}
 %>
@@ -71,11 +84,14 @@
 			out.println("<table border width=\"100%\">");
 
 			out.println("<tr>");
-			out.println("<td colspan=3>");
+			out.println("<td>查询条件:</td>");
+			out.println("<td colspan=2>");
 			
-			out.println("<form action=jdbcExample1.jsp method=\"post\" name=\"form1\">");
-			out.println("查询名称:");
+			out.println("<form action=jdbcExample2.jsp method=\"post\" name=\"form1\">");
+			out.println("名称:");
 			out.println("<input type=\"text\" name=\"name\">");
+			out.println("网址(相关字母或数字等):");
+			out.println("<input type=\"text\" name=\"url\">");
 			out.println("<input type=\"submit\" value=\"提交\">");
 			out.println("</form>");
 			
