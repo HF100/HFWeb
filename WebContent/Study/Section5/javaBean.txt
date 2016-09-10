@@ -1,0 +1,5 @@
+javaBean 可重复使用的软件组件
+
+两种
+1.可视化javaBean
+2.非可视化javaBean
