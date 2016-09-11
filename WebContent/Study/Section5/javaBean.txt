@@ -3,3 +3,60 @@ javaBean 可重复使用的软件组件
 两种
 1.可视化javaBean
 2.非可视化javaBean
+
+编译javaBean
+
+.class 文件
+javac filename.java
+
+
+jar 文件一个压缩包,包含一组类以及相关的资源(甚至是声音和图像文件)
+
+jar 打包
+
+jar options [jarFileName.jar]files
+
+jarFileName 打包后jar文件名称
+files 是要打包的文件
+
+
+部署javaBean
+
+1.部署 javaBean的class 文件
+	* 对web服务器中的JSP页面都有效
+		需要把.class 文件拷贝至Tomcat安装目录的classes子目录下,需要重启Tomcat才生效
+	
+	* 仅对当前应用有效
+		需要把.class 文件拷贝当前应用的WEB-INF下的classes子目录下
+2.部署 jar
+	* 对web服务器中的JSP页面都有效
+		需要把.class 文件拷贝至Tomcat安装目录的lib子目录下,需要重启Tomcat才生效
+	
+	* 仅对当前应用有效
+		需要把.class 文件拷贝当前应用的WEB-INF下的lib子目录下
+		
+3. 在JSP中使用javaBean
+
+导入 <%@ page import="包名.javaBean类名" %>
+<jsp:useBean id="javaBean实例名称" class="包名.javaBean类名" scope="javaBean实例的有效范围"></jsp:useBean>
+<jsp:useBean id="javaBean实例名称" class="包名.javaBean类名" scope="javaBean实例的有效范围"/>	
+
+scope:
+
+page  有效范围为当前jsp页面
+
+session  有效范围为一次对话
+
+request 有效范围为Requset 期间
+
+application 服务器所有客户之间共享javaBean
+
+
+设置属性
+<jsp:setProperty name="javaBean实例名称" property="javaBean的属性名称"></jsp:jsp:setProperty>
+<jsp:setProperty name="javaBean实例名称" property="javaBean的属性名称"/>
+
+//获得属性
+<jsp:getProperty name="javaBean实例名称" property="javaBean的属性名称"></jsp:jsp:getProperty>
+<jsp:getProperty name="javaBean实例名称" property="javaBean的属性名称"/>
+
