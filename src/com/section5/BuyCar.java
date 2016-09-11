@@ -12,7 +12,7 @@ public class BuyCar implements Serializable {
 		System.out.println("BuyCar build success....");
 	}
 	
-	public void buyCar() {
+	public BuyCar() {
 		// 构造函数
 	}
 

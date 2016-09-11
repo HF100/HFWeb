@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
-<jsp:useBean id="query" type="com.section5.QueryJava" scope="page">
+<%@ page import="com.section5.*" %>
+<jsp:useBean id="query" class="com.section5.QueryJava" scope="page">
 </jsp:useBean>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -10,7 +11,6 @@
 <title>购物</title>
 </head>
 <body>
-	我要<a href="MyCar.jsp">查看购物车</a><br>
 	<%
 		//查询数据库
 		ResultSet rs = null;
@@ -28,7 +28,9 @@
 		}
 		
 		out.println("<table border=\"1\" width=\"800px\" align=\"center\">");
-		out.println("<tr><td colspan=4>网上书店商城<td></tr>");
+		out.println("<tr><td colspan=5 align='center'>网上书店商城</td></tr>");
+		out.println("<tr><td colspan=5 align='right'><a href='MyCar.jsp'>查看购物车</a></td></tr>");
+		
 		out.println("<tr>");
 		out.println("<td>序号</td>");
 		out.println("<td>书名</td>");
@@ -43,9 +45,10 @@
 			out.println("<td>"+rs.getString("Goods_name")+"</td>");
 			out.println("<td>"+rs.getString("Goods_money")+"</td>");
 			out.println("<td>"+rs.getDate("creat_date")+"</td>");
-			out.println("<td><a href='myCar.jsp?Goods_id="+rs.getInt(0)+"'>购买</a></td>");
+			out.println("<td><a href='MyCar.jsp?Goods_id="+rs.getInt("Goods_id")+"'>购买</a></td>");
 			out.println("</tr>");
 		}
+		
 		out.println("</table>");
 		rs.close();
 	%>

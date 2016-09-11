@@ -103,11 +103,11 @@ public class QueryJava {
 	}
 
 	public QueryJava() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public static void main(String[] args) {
-
+		System.out.println("QueryJava build Success.....");
 	}
 
 }
