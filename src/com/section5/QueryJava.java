@@ -23,7 +23,8 @@ public class QueryJava {
 	}
 
 	/* 设置连接参数 */
-	public void setConnection(String driverName, String jdbcURL, String username, String passwd) throws Exception {
+	public void setConnection(String driverName, String jdbcURL,
+			String username, String passwd) throws Exception {
 		Connection conn1;
 		Class.forName(driverName);
 		conn1 = DriverManager.getConnection(jdbcURL, username, passwd);
@@ -34,8 +35,10 @@ public class QueryJava {
 	/* 获取查询结果 */
 	public ResultSet getResult() {
 		try {
-			PreparedStatement select_stm = conn.prepareStatement(query_statement,
-					java.sql.ResultSet.TYPE_SCROLL_INSENSITIVE, java.sql.ResultSet.CONCUR_READ_ONLY);
+			PreparedStatement select_stm = conn.prepareStatement(
+					query_statement,
+					java.sql.ResultSet.TYPE_SCROLL_INSENSITIVE,
+					java.sql.ResultSet.CONCUR_READ_ONLY);
 			if (param != null) {
 				for (int i = 0; i < param.length; i++) {
 					select_stm.setString(i + 1, param[i]);
@@ -49,9 +52,11 @@ public class QueryJava {
 	}
 
 	/* 对数据库进行增加记录操作 */
-	public void insertRecord() throws SQLException, java.io.UnsupportedEncodingException {
+	public void insertRecord() throws SQLException,
+			java.io.UnsupportedEncodingException {
 		try {
-			PreparedStatement insert_stm = conn.prepareStatement(query_statement);
+			PreparedStatement insert_stm = conn
+					.prepareStatement(query_statement);
 			if (param != null) {
 				for (int i = 0; i < param.length; i++) {
 					insert_stm.setString(i + 1, param[i]);
@@ -67,9 +72,11 @@ public class QueryJava {
 	}
 
 	/* 对数据库进行更新记录操作 */
-	public void updateRecord() throws SQLException, java.io.UnsupportedEncodingException {
+	public void updateRecord() throws SQLException,
+			java.io.UnsupportedEncodingException {
 		try {
-			PreparedStatement update_stm = conn.prepareStatement(query_statement);
+			PreparedStatement update_stm = conn
+					.prepareStatement(query_statement);
 			if (param != null) {
 				for (int i = 0; i < param.length; i++) {
 					update_stm.setString(i + 1, param[i]);
@@ -85,9 +92,11 @@ public class QueryJava {
 	}
 
 	/* 对数据库进行更新记录操作 */
-	public void deleteRecord() throws SQLException, java.io.UnsupportedEncodingException {
+	public void deleteRecord() throws SQLException,
+			java.io.UnsupportedEncodingException {
 		try {
-			PreparedStatement delete_stm = conn.prepareStatement(query_statement);
+			PreparedStatement delete_stm = conn
+					.prepareStatement(query_statement);
 			if (param != null) {
 				for (int i = 0; i < param.length; i++) {
 					delete_stm.setString(i + 1, param[i]);
@@ -102,8 +111,19 @@ public class QueryJava {
 		}
 	}
 
-	public QueryJava() {
+	public void delloc()  {
 		
+		try {
+			result.close();
+			conn.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public QueryJava() {
+
 	}
 
 	public static void main(String[] args) {

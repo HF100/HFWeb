@@ -1,12 +1,11 @@
 package com.section5;
 
 import java.io.*;
-
-import com.sun.org.apache.xalan.internal.xsltc.runtime.Hashtable;
+import java.util.*;;
 
 public class BuyCar implements Serializable {
 
-	Hashtable myGoods = new Hashtable();
+	Hashtable<String, Integer> myGoods = new Hashtable<String, Integer>();
 
 	public static void main(String[] args) {
 		System.out.println("BuyCar build success....");
@@ -14,11 +13,13 @@ public class BuyCar implements Serializable {
 	
 	public BuyCar() {
 		// 构造函数
+		System.out.println("1:"+this);
 	}
 
 	public void addGoods(String Goods_id, int Goods_Count) {
+		System.out.println("2:"+this);
 		// 把商品加入购物车
-		if (myGoods.contains(Goods_id)) {
+		if (myGoods.containsKey(Goods_id)) {
 			// 购物车存在此商品则累加个数
 			int temp_count = ((Integer) myGoods.get(Goods_id)).intValue();
 			temp_count = temp_count + Goods_Count;
@@ -30,11 +31,13 @@ public class BuyCar implements Serializable {
 	}
 
 	public boolean minusGoods(String Goods_id, int Goods_Count) {
+		System.out.println("5:"+this);
 		// 把商品从购物车中拿出
-		if (myGoods.contains(Goods_id)) {
+		if (myGoods.containsKey(Goods_id)) {
 			// 购物车中存在此商品则减少个数
 			int temp_Count = ((Integer) myGoods.get(Goods_id)).intValue();
 			temp_Count = temp_Count - Goods_Count;
+			System.out.println("********:"+temp_Count);
 			if (temp_Count <= 0) {
 				deleteGoods(Goods_id);
 			} else {
@@ -47,7 +50,8 @@ public class BuyCar implements Serializable {
 		}
 	}
 	
-	public Hashtable listMyGoods() {
+	public Hashtable<String, Integer> listMyGoods() {
+		System.out.println("3:"+this);
 		//得到购物车中所有商品
 		return myGoods;
 	}

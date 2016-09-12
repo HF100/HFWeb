@@ -24,7 +24,7 @@
 			//得到查询的结果
 			rs = query.getResult();
 		} catch (SQLException e) {
-			out.print("SQL 异常");
+			out.print("SQL 异常" + e);
 		}
 		
 		out.println("<table border=\"1\" width=\"800px\" align=\"center\">");
