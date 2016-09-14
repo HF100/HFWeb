@@ -19,7 +19,7 @@
 			Class.forName("com.mysql.jdbc.Driver");
 			
 			
-			String connection_url = "jdbc:mysql://localhost:3306/RUNOOB??useUnicode=true&characterEncoding=utf-8";
+			String connection_url = "jdbc:mysql://localhost:3306/RUNOOB?useUnicode=true&characterEncoding=utf-8";
 			String user_name = "root";
 			String user_pass = "123456hf";
 			

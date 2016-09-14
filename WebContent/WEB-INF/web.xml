@@ -75,5 +75,15 @@
 		<servlet-name>IOFileServlet</servlet-name><!-- 我们定义的servlet应用名字 -->
 		<url-pattern>/Servlet/IOFileServlet</url-pattern><!-- 地址名 -->
 	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>SqlTableServlet</servlet-name><!-- 定义的servlet应用名字 -->
+		<servlet-class>com.section6.SqlTableServlet</servlet-class><!-- servlet应用名字对应的具体servlet文件 -->
+	</servlet>
+
+	<servlet-mapping><!-- 地址映射 -->
+		<servlet-name>SqlTableServlet</servlet-name><!-- 我们定义的servlet应用名字 -->
+		<url-pattern>/Servlet/SqlTableServlet</url-pattern><!-- 地址名 -->
+	</servlet-mapping>
 
 </web-app>

@@ -1,0 +1,25 @@
+
+Model1 模式
+ JSP开发容易上手,开发工具丰富;
+ 有: Visual age ,Jbuilder, JCreator, Dreamwear
+ 开发小型项目时具有较大优势
+ 
+ 不足:
+ 不适合大规模的项目开发
+  程序复用程度不高,
+  当修改程序时,可能对其他程序的影响较大,不便于程序的扩展
+  各种逻辑没有分离
+
+
+Model2 模式 (MVC 模式)
+实现了业务逻辑 显示逻辑 控制逻辑费分离,是基于MVC的框架。
+MVC (Model-View-Controller 模型 视图 控制器)
+Model 表示Web应用程序的业务逻辑,常用的是javaBean,EJB(Enterprise JavaBean,企业JavaBean)
+View 表示Web应用程序显示的界面性程序,用JSP实现
+Controller 是Web应用程序的控制逻辑,用Servlet来控制
+
+MVC模式适合大规模项目的开发,是组件式的开发
+
+为了降低MVC模式开发难度,可以选择线程的框架来辅助开发
+
+Struts
