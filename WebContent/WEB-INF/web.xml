@@ -46,4 +46,34 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
+	<servlet>
+		<servlet-name>FirstServlet</servlet-name><!-- 定义的servlet应用名字 -->
+		<servlet-class>com.section6.FirstServlet</servlet-class><!-- servlet应用名字对应的具体servlet文件 -->
+	</servlet>
+
+	<servlet-mapping><!-- 地址映射 -->
+		<servlet-name>FirstServlet</servlet-name><!-- 我们定义的servlet应用名字 -->
+		<url-pattern>/Servlet/FirstServlet</url-pattern><!-- 地址名 -->
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>AcceptUserReg</servlet-name><!-- 定义的servlet应用名字 -->
+		<servlet-class>com.section6.AcceptUserReg</servlet-class><!-- servlet应用名字对应的具体servlet文件 -->
+	</servlet>
+
+	<servlet-mapping><!-- 地址映射 -->
+		<servlet-name>AcceptUserReg</servlet-name><!-- 我们定义的servlet应用名字 -->
+		<url-pattern>/Servlet/AcceptUserReg</url-pattern><!-- 地址名 -->
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>IOFileServlet</servlet-name><!-- 定义的servlet应用名字 -->
+		<servlet-class>com.section6.IOFileServlet</servlet-class><!-- servlet应用名字对应的具体servlet文件 -->
+	</servlet>
+
+	<servlet-mapping><!-- 地址映射 -->
+		<servlet-name>IOFileServlet</servlet-name><!-- 我们定义的servlet应用名字 -->
+		<url-pattern>/Servlet/IOFileServlet</url-pattern><!-- 地址名 -->
+	</servlet-mapping>
+
 </web-app>

@@ -1,0 +1,48 @@
+javaScript 是运行在客户端浏览器中的脚本程序
+
+java Applet 是运行在客户端的java小程序
+
+Servlet 是运行在服务器端
+
+
+JSP -> Serlet -> ByteCode
+
+Servlet的生命周期
+
+1.Servlet的初始化。
+Servlet实际是一个类,当第一次被客户端请求时,Web服务器引擎首先要生成这个Servlet类的对象,
+并加载这个对象,通过这个对象的init()方法完成一些初始化工作
+
+2.生成的 Servlet类的对象调用service() 方法来响应请求
+
+3.Servletl类的对象自第一次被生成后将常驻内存直至Web服务器关闭,
+当再次被请求将直接从内存中取出对象来响应请求。当Web服务被关闭时,
+将调用Servlet类的对象的destroy() 方法消除此对象。
+
+上述三个过程中,init()方法只被调用一次,即第一次被请求时调用;
+service()方法在每次Servlet被请求时都会执行
+
+Servlet扩展程序包
+java.Servlet 和 java.Servlet.https
+
+客户端请求Servlet ——> 服务端接收两个对象(ServletRequest ServletResponse)
+
+ServletInputStream 是客户端请求使用POST或PUT方法提交的数据
+ServletOutputStream 可向客户端输出数据
+
+
+1 doGet()
+
+2 doPost()
+
+3 init()
+
+4 service()
+
+5 destroy()
+
+部署Servlet
+
+
+
+
